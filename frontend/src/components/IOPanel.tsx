@@ -6,12 +6,14 @@ export const IOPanel = () => {
   const { showIo, toggleShowIo, output, setInput, executing } =
     useEditorStore();
 
-  if (!showIo) return null;
-
   return (
-    <div className="flex h-72 w-full border-t border-white/10">
+    <div
+      className={`relative flex w-full overflow-hidden border-white/10 transition-[height] duration-200 ease-in-out ${
+        showIo ? "h-72 border-t" : "h-0 border-t-0"
+      }`}
+    >
       <button
-        className="absolute right-4 z-10 mt-2 h-8 w-8 -translate-y-full rounded-full text-white/60 hover:bg-white/10 hover:text-white"
+        className="absolute right-4 top-2 z-10 h-8 w-8 rounded-full text-white/60 hover:bg-white/10 hover:text-white"
         onClick={toggleShowIo}
       >
         ╳

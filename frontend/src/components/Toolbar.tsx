@@ -112,17 +112,17 @@ export const Toolbar = () => {
           online-ide
         </span>
         <span
-          className="flex items-center gap-2 text-xs text-white/50"
+          className="flex min-w-[130px] items-center gap-2 text-xs text-white/50"
           title={HEART_BEAT_LABEL[heartBeat]}
         >
-          <span className={`h-2 w-2 rounded-full ${HEART_BEAT_COLOR[heartBeat]}`} />
+          <span className={`h-2 w-2 shrink-0 rounded-full ${HEART_BEAT_COLOR[heartBeat]}`} />
           {HEART_BEAT_LABEL[heartBeat]}
         </span>
       </div>
 
       <div className="flex items-center gap-2">
         <select
-          className="rounded-md border border-white/10 bg-neutral-900 px-2 py-1 text-sm text-white"
+          className="w-28 rounded-md border border-white/10 bg-neutral-900 px-2 py-1 text-sm text-white"
           value={language}
           onChange={(e) => langChangeHandler(Number(e.target.value))}
         >
@@ -134,7 +134,7 @@ export const Toolbar = () => {
         </select>
 
         <select
-          className="rounded-md border border-white/10 bg-neutral-900 px-2 py-1 text-sm text-white"
+          className="w-36 rounded-md border border-white/10 bg-neutral-900 px-2 py-1 text-sm text-white"
           value={theme}
           onChange={(e) => setTheme(Number(e.target.value))}
         >
@@ -161,7 +161,7 @@ export const Toolbar = () => {
 
         <button
           disabled={executing}
-          className="rounded-md bg-emerald-600 px-4 py-1 text-sm font-medium text-white hover:bg-emerald-500 disabled:opacity-50"
+          className="w-24 rounded-md bg-emerald-600 px-4 py-1 text-sm font-medium text-white hover:bg-emerald-500 disabled:opacity-50"
           onClick={() => void runCodeHandler()}
         >
           {executing ? "Running..." : "Run"}
