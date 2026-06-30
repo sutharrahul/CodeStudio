@@ -17,6 +17,10 @@ import { basicSetup } from "codemirror";
 export const extensions = [
   basicSetup,
   EditorView.editable.of(true),
+  EditorView.theme({
+    "&": { height: "100%" },
+    ".cm-scroller": { overflow: "auto" },
+  }),
   keymap.of([
     ...defaultKeymap,
     {

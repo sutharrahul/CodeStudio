@@ -69,5 +69,5 @@ export const CodeEditor = ({ codeId }: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchStatus]);
 
-  return <div ref={editorRef} className="h-full w-full overflow-auto" />;
+  return <div ref={editorRef} className="h-full w-full overflow-hidden" />;
 };
