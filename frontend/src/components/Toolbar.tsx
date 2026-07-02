@@ -20,8 +20,6 @@ const LANGUAGE_OPTIONS: { label: string; value: Languages }[] = [
 
 const THEME_OPTIONS: { label: string; value: Themes }[] = [
   { label: "Nord", value: Themes.Nord },
-  { label: "Basic Dark", value: Themes.BasicDark },
-  { label: "Basic Light", value: Themes.BasicLight },
   { label: "Material Dark", value: Themes.MaterialDark },
 ];
 
