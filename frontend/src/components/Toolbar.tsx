@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
+import { Dropdown } from "@/components/ui/Dropdown";
 import { execute } from "@/lib/api/executor";
 import { saveCode } from "@/lib/api/saveCode";
 import { useEditorStore } from "@/lib/store/store";
@@ -119,29 +120,19 @@ export const Toolbar = () => {
       </div>
 
       <div className="flex items-center gap-2">
-        <select
-          className="w-28 rounded-md border border-white/10 bg-neutral-900 px-2 py-1 text-sm text-white"
+        <Dropdown
+          className="w-28"
           value={language}
-          onChange={(e) => langChangeHandler(Number(e.target.value))}
-        >
-          {LANGUAGE_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value}>
-              {opt.label}
-            </option>
-          ))}
-        </select>
+          options={LANGUAGE_OPTIONS}
+          onChange={langChangeHandler}
+        />
 
-        <select
-          className="w-36 rounded-md border border-white/10 bg-neutral-900 px-2 py-1 text-sm text-white"
+        <Dropdown
+          className="w-36"
           value={theme}
-          onChange={(e) => setTheme(Number(e.target.value))}
-        >
-          {THEME_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value}>
-              {opt.label}
-            </option>
-          ))}
-        </select>
+          options={THEME_OPTIONS}
+          onChange={setTheme}
+        />
 
         <button
           className="rounded-md border border-white/10 px-3 py-1 text-sm text-white hover:bg-white/10"
