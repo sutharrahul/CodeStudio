@@ -25,7 +25,12 @@ export const IdeWorkspace = ({ codeId }: Props) => {
           <Allotment.Pane>
             <CodeEditor codeId={codeId} />
           </Allotment.Pane>
-          <Allotment.Pane visible={showIo} preferredSize={380} minSize={280}>
+          <Allotment.Pane
+            visible={showIo}
+            preferredSize={380}
+            minSize={280}
+            maxSize={640}
+          >
             <IOPanel />
           </Allotment.Pane>
         </Allotment>
