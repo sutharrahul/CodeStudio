@@ -108,7 +108,7 @@ export const Toolbar = () => {
     <header className="flex items-center justify-between border-b border-white/10 bg-neutral-950 px-4 py-3">
       <div className="flex items-center gap-3">
         <span className="text-sm font-semibold tracking-wide text-white">
-          online-ide
+          CodeStudio
         </span>
         <span
           className="flex min-w-[130px] items-center gap-2 text-xs text-white/50"
