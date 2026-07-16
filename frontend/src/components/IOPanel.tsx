@@ -11,7 +11,7 @@ export const IOPanel = () => {
   return (
     <div className="relative flex h-full w-full flex-col border-l border-white/10">
       <button
-        className="absolute right-3 top-2 z-10 flex h-7 w-7 items-center justify-center rounded-full text-white/60 hover:bg-white/10 hover:text-white"
+        className="absolute  right-3 top-0.5 z-10 rounded-full text-white/60 hover:bg-white/10 hover:text-white"
         onClick={toggleShowIo}
       >
         <ChevronRight size={18} />
